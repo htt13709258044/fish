@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>大鱼小鱼</title>
+    <style>
+        body{
+            padding-top:10px;
+        }
+        .all_bg{
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;;
+        }
+        #allcanvas{
+            position: relative;/*父元素相对定位*/
+            width: 800px;
+            height: 600px;
+            margin:0px;
+        }
+        #canvas1{
+            position: absolute;
+            width: 800px;
+            height: 600px;
+            z-index:1;/*q前置背景*/
+            bottom:0;
+            left:0
+        }
+        #canvas2{
+            position: absolute;
+            width: 800px;
+            height: 600px;
+            z-index:0;/*后置背景*/
+            bottom:0;
+            left:0
+        }
+    </style>
+</head>
+<body>
+    <div class="all_bg">
+        <div id="allcanvas">
+            <canvas id="canvas1" width="800" height="600">
+                <!--前面画布[大鱼，小鱼]-->
+            </canvas>
+            <canvas id="canvas2" width="800" height="600">
+                <!--后面画布[背景，海葵，实物]-->
+            </canvas>
+        </div>
+    </div>
+    <!-- 游戏公共函数库文件 -自动计算时间的定时器-->
+    <script src="js/commonFunctions.js"></script>
+    <!-- 游戏入口js文件main.js-->
+    <script src="js/main.js"></script>
+    <!-- 绘制游戏背景-->
+    <script src="js/background.js"></script>
+    <!-- 加载海葵类文件-->
+    <script src="js/ane.js"></script>
+    <!-- 加载食物类文件-->
+    <script src="js/friut.js"></script>
+    <!-- 加载大鱼类文件-->
+    <script src="js/mom.js"></script>
+    <!-- 加载碰撞检测文件-->
+    <script src="js/collsion.js"></script>
+    <!-- 加载小鱼类文件-->
+    <script src="js/baby.js"></script>
+</body>
+</html>
